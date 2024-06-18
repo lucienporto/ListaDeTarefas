@@ -26,7 +26,6 @@ namespace ListaDeTarefas.Data
 
             modelBuilder.Entity<Status>().HasData(
                     new Status { StatusId = "aberto", Nome = "Aberto"},
-                    new Status { StatusId = "em andamentos", Nome = "Em Andamento"},
                     new Status { StatusId = "completo", Nome = "Completo"}
                 );
             

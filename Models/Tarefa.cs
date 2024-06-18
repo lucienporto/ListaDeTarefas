@@ -12,7 +12,7 @@ namespace ListaDeTarefas.Models
         public string Descricao { get; set; }
 
         [Required(ErrorMessage = "Defina uma data de vencimento!")]
-        public DateTime? DatadeVencimento { get; set; }
+        public DateTime? DataDeVencimento { get; set; }
 
         [Required(ErrorMessage = "Selecione uma categoria!")]
         public string CategoriaId { get; set; }
@@ -26,6 +26,6 @@ namespace ListaDeTarefas.Models
         [ValidateNever]
         public Status Status { get; set; }
 
-        public bool Atrasado => StatusId == "aberto" && DatadeVencimento < DateTime.Today;
+        public bool Atrasado => StatusId == "aberto" && DataDeVencimento < DateTime.Today;
     }
 }
